@@ -1,0 +1,135 @@
+#root{
+    width: 100vw !important;
+    height: 100vh !important;
+}
+#folder{
+    min-height: 500px !important;
+}
+#folder, #preview, #editor, #header header, #list{
+    width: 100%;
+    height: 100% !important;
+}
+#folder, #console, #header, #header header, #bar, #list, #list button{
+    display: flex !important;
+}
+#preview{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+#console{
+    width: auto !important;
+    height: 100% !important;
+    flex-direction: column !important;
+}
+#editor{
+    resize: horizontal;
+    outline: none !important;
+    border: .25rem solid black !important;
+    min-width: 350px !important;
+    max-width: 100vw !important;
+    color:rgb(0, 145, 255);
+    font-size: .90rem !important;
+    background-color: rgb(46, 45, 45) !important;
+}
+#header{
+    width: 100% !important;
+    height: 25% !important;
+    flex-direction: column;
+}
+#header header{
+    margin: 0 !important;
+    padding: 0 .75rem !important;
+    background-color: rgb(17, 17, 17) !important;
+}
+#view, #header h1{
+    margin: auto .25rem !important;
+    font-size: 2rem !important;
+}
+#view{
+    width: 4rem !important;
+    height: auto !important;
+    border-color: transparent !important;
+    border-radius: .25rem !important;
+    background-color: transparent;
+    top: 0 !important;
+    left: .75rem !important;
+}
+#view i{
+    color: rgb(231, 70, 243) !important;
+    background-color: transparent !important;
+    margin: .12rem auto !important;
+}
+#bar{
+    flex-direction: column !important;
+    width: 100% !important;
+    height: 50% !important;
+    background-color: rgb(0, 0, 0) !important;
+    padding: 0 1.5rem !important;
+}
+#list{
+    position: relative !important;
+}
+#list button, #guide-color{
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: bolder !important;
+    text-transform:uppercase;
+    width: auto !important;
+    height: 65% !important;
+    margin: .5rem !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    font-size: .85rem !important;
+    padding: .20rem .50rem !important;
+    border-radius: 0.25rem !important;
+}
+#indicador{
+    margin: 0 .125rem !important;
+    width: auto !important;
+    height: .5vh !important;
+}
+#list button:hover{
+    cursor: pointer;
+    background-color: #86e078ad !important;
+    color: azure !important;
+    transform:scale(.98) !important;
+}
+#list button:active{
+    background-color: #e9f0d0ad !important;
+    color: beige !important;
+}
+#guide-color{
+    position: absolute !important;
+    right: 0 !important;
+    border: none !important;
+    cursor: default !important;
+}
+#guide-color input{
+    width: 2.5rem !important;
+    height: 100% !important;
+    margin: auto 0 !important;
+    border: none !important;
+    background-color: transparent !important;
+}
+#guide-color input:hover{
+    cursor: pointer !important;
+}
+@media (max-width:500px){
+    #folder{
+        flex-direction: column !important;
+    }
+    #editor{
+        resize: none !important;
+        width: 100% !important;
+    }
+    #console, #preview{
+        width: 100% !important;
+    }
+    #console{
+        min-height: 100% !important;
+        position:fixed;
+    }
+    #guide-color{
+      display:none;
+    }
+}
